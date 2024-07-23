@@ -1,0 +1,29 @@
+# Ignore artifacts:
+build
+coverage
+yarn.lock
+package-lock.json
+.DS_Store
+.eslintrc
+
+# dotfile
+.env*
+
+# markdown
+*.md
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+/dist/
+
+# yarn
+/.yarn/
+
+# materials
+public/
+*.ico
+*.svg
