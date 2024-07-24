@@ -3,10 +3,11 @@
         "airbnb", // https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/rules/react.js
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "plugin:import/errors", // react
-        "plugin:import/warnings", // react
+        "plugin:import/errors",
+        "plugin:import/warnings",
         "plugin:import/typescript",
         "plugin:react/jsx-runtime",
+        "plugin:react-hooks/recommended", // https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks
         "prettier"
     ],
     "parser": "@typescript-eslint/parser",

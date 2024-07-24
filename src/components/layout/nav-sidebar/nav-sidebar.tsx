@@ -62,7 +62,7 @@ const FormulaTemplates = () => {
         window.addEventListener('keydown', handleKeyDown)
 
         return () => window.removeEventListener('keydown', handleKeyDown)
-    }, [copyFunction, templates])
+    }, [copyFunction])
 
     return (
         <>
