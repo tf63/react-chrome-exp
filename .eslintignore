@@ -1,22 +1,37 @@
 # config
-.eslintrc.js
-prettier.config.js
-next.config.js
-tailwind.config.js
-tsconfig.*.json
-postcss.config.js
-plopfile.js
-jest.config.js
-package-lock.json
+**/tsconfig.*
+**/.eslintrc
+**/.prettierrc
+**/.prettierignore
+**/vite.config.*
+**/next.config.*
+**/tailwind.config.*
+**/postcss.config.*
+**/plopfile.*
+**/jest.config.*
 
-*.spec.*
-*.test.*
+# lock
+**/package-lock.json
+**/yarn.lock
+**/pnpm-lock.yaml
 
+# test
+**/*.spec.*
+**/*.test.*
 
-# build dir
-build/
-bin/
-obj/
-out/
-.next/
-dist/
+# trash
+**/.DS_Store
+
+# dir
+**/node_modules/**/*
+**/public/**/*
+**/dist/**/*
+**/dist-ssr/**/*
+**/build/**/*
+**/coverage/**/*
+**/bin/**/*
+**/obj/**/*
+**/out/**/*
+**/.yarn/**/*
+**/.next/**/*
+**/.vercel/**/*

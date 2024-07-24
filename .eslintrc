@@ -1,65 +1,87 @@
 {
     "extends": [
-        "eslint:recommended",
+        "airbnb", // https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/rules/react.js
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "next/core-web-vitals",
+        "plugin:import/errors", // react
+        "plugin:import/warnings", // react
+        "plugin:import/typescript",
+        "plugin:react/jsx-runtime",
         "prettier"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "project": "./tsconfig.json"
     },
-    "plugins": ["@typescript-eslint"],
+    "plugins": ["unused-imports"],
     "root": true,
+    "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [".ts", ".tsx"]
+        }
+    },
     "rules": {
+        "no-empty-pattern": "off",
+        // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/README.md
+        "react/function-component-definition": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".jsx", "tsx"] }],
+        // https://github.com/import-js/eslint-plugin-import
+        "import/no-unresolved": "off",
+        "import/prefer-default-export": "off",
+        "import/no-default-export": "warn",
+        "import/extensions": "off",
         "import/order": [
             "error",
             {
                 "groups": ["builtin", "external", "internal", ["parent", "sibling"], "object", "type", "index"],
                 "newlines-between": "always",
+                "alphabetize": { "order": "asc", "caseInsensitive": true },
                 "pathGroupsExcludedImportTypes": ["builtin"],
                 "pathGroups": [
-                    {
-                        "pattern": "@/utils/**",
-                        "group": "internal",
-                        "position": "before"
-                    },
-                    {
-                        "pattern": "@/libs/**",
-                        "group": "internal",
-                        "position": "before"
-                    },
-                    {
-                        "pattern": "@/hooks/**",
-                        "group": "internal",
-                        "position": "before"
-                    },
-                    {
-                        "pattern": "@/components/**",
-                        "group": "internal",
-                        "position": "before"
-                    },
-                    {
-                        "pattern": "@/features/**",
-                        "group": "internal",
-                        "position": "before"
-                    },
-                    {
-                        "pattern": "@/const/**",
-                        "group": "internal",
-                        "position": "before"
-                    },
-                    {
-                        "pattern": "@/types/**",
-                        "group": "internal",
-                        "position": "before"
-                    }
-                ],
-                "alphabetize": {
-                    "order": "asc"
-                }
+                    { "pattern": "@/utils/**", "group": "internal", "position": "before" },
+                    { "pattern": "@/libs/**", "group": "internal", "position": "before" },
+                    { "pattern": "@/hooks/**", "group": "internal", "position": "before" },
+                    { "pattern": "@/components/**", "group": "internal", "position": "before" },
+                    { "pattern": "@/features/**", "group": "internal", "position": "before" },
+                    { "pattern": "@/const/**", "group": "internal", "position": "before" },
+                    { "pattern": "@/types/**", "group": "internal", "position": "before" },
+                    { "pattern": "*.css", "group": "index", "position": "before" }
+                ]
+            }
+        ],
+        // 使ってないimportを削除する
+        // https://github.com/sweepline/eslint-plugin-unused-imports
+        "no-unused-vars": "off", // or "@typescript-eslint/no-unused-vars": "off",
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+            "warn",
+            {
+                "vars": "all",
+                "varsIgnorePattern": "^_",
+                "args": "after-used",
+                "argsIgnorePattern": "^_"
             }
         ]
-    }
+    },
+    "overrides": [
+        {
+            "files": ["*.stories.*", "*.story.*"],
+            "rules": {
+                "useHookAtTopLevel": "off",
+                "import/no-default-export": "off"
+            }
+        },
+        {
+            "files": [".storybook/*"],
+            "rules": {
+                "import/no-default-export": "off"
+            }
+        },
+        {
+            "files": ["layout.*", "page.*", "loading.*", "error.*", "not-found.*", "App.*"],
+            "rules": {
+                "import/no-default-export": "off"
+            }
+        }
+    ]
 }

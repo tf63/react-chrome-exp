@@ -1,9 +1,3 @@
-type ButtonProps = {}
+type ButtonProps = object
 
-export const Button = ({}: ButtonProps) => {
-    return (
-      <div>
-        Button Component
-      </div>
-    )
-}
+export const Button = ({}: ButtonProps) => <div>Button Component</div>

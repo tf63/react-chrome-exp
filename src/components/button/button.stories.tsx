@@ -6,9 +6,9 @@ type ButtonType = typeof Button
 
 export default {
     title: 'Button',
-    component: Button,
+    component: Button
 } satisfies Meta<ButtonType>
 
 export const Default: StoryObj<ButtonType> = {
-    render: () => <Button />,
+    render: () => <Button />
 }

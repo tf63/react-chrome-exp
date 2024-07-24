@@ -1,29 +1,26 @@
-# Ignore artifacts:
-build
-coverage
-yarn.lock
-package-lock.json
-.DS_Store
-.eslintrc
+# lock
+**/package-lock.json
+**/yarn.lock
+**/pnpm-lock.yaml
 
-# dotfile
-.env*
+# test
+**/*.spec.*
+**/*.test.*
 
-# markdown
-*.md
+# trash
+**/.DS_Store
+**/*.hbs
 
-# next.js
-/.next/
-/out/
-
-# production
-/build
-/dist/
-
-# yarn
-/.yarn/
-
-# materials
-public/
-*.ico
-*.svg
+# dir
+**/node_modules/**/*
+**/public/**/*
+**/dist/**/*
+**/dist-ssr/**/*
+**/build/**/*
+**/coverage/**/*
+**/bin/**/*
+**/obj/**/*
+**/out/**/*
+**/.yarn/**/*
+**/.next/**/*
+**/.vercel/**/*

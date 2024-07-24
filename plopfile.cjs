@@ -7,30 +7,30 @@ module.exports = function (plop) {
                 type: 'input',
                 name: 'path',
                 default: '',
-                message: 'Please enter the directory name following src/components/:',
+                message: 'Please enter the directory name following src/components/:'
             },
             {
                 type: 'input',
                 name: 'name',
-                message: 'Please enter the component name:',
-            },
+                message: 'Please enter the component name:'
+            }
         ],
         actions: [
             {
                 type: 'add',
                 path: 'src/components/{{path}}/{{kebabCase name}}/index.tsx',
-                templateFile: 'templates/components/index.tsx.hbs',
+                templateFile: 'templates/components/index.tsx.hbs'
             },
             {
                 type: 'add',
                 path: 'src/components/{{path}}/{{kebabCase name}}/{{kebabCase name}}.tsx',
-                templateFile: 'templates/components/component.tsx.hbs',
+                templateFile: 'templates/components/component.tsx.hbs'
             },
             {
                 type: 'add',
                 path: 'src/components/{{path}}/{{kebabCase name}}/{{kebabCase name}}.stories.tsx',
-                templateFile: 'templates/components/component.stories.tsx.hbs',
-            },
-        ],
+                templateFile: 'templates/components/component.stories.tsx.hbs'
+            }
+        ]
     })
 }

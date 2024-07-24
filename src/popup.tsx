@@ -1,18 +1,21 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
 import './index.css'
+import ReactDOM from 'react-dom/client'
 
-
-const Popup = () => {
-  return (
-    <div>
-      <h1 className='text-xl p-5 w-full bg-emerald-400 text-zinc-100 font-semibold' >Popup</h1>
-    </div>
-  )
+export function Popup() {
+    const a = [1, 2, 3]
+    return (
+        <div>
+            {a.map((value) => (
+                <div>{value}</div>
+            ))}
+            <h1 className="min-w-62 bg-emerald-400 p-5 text-xl font-semibold text-zinc-100">Popup 1</h1>
+        </div>
+    )
 }
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <Popup />
-  </React.StrictMode>,
+    <React.StrictMode>
+        <Popup />
+    </React.StrictMode>
 )
