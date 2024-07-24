@@ -21,10 +21,13 @@
         }
     },
     "rules": {
+        "no-implicit-coercion": ["error", { "boolean": false }],
         "no-empty-pattern": "off",
         // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/README.md
         "react/function-component-definition": "off",
+        "react/button-has-type": "off",
         "react/jsx-filename-extension": [1, { "extensions": [".jsx", "tsx"] }],
+        "react/no-array-index-key": "warn",
         // https://github.com/import-js/eslint-plugin-import
         "import/no-unresolved": "off",
         "import/prefer-default-export": "off",
@@ -61,7 +64,8 @@
                 "args": "after-used",
                 "argsIgnorePattern": "^_"
             }
-        ]
+        ],
+        "@typescript-eslint/strict-boolean-expressions": "error"
     },
     "overrides": [
         {
