@@ -1,5 +1,3 @@
-'use client'
-
 import { useCloseRef } from '@/hooks/use-close-ref'
 
 type FontSizeDropdownProps = {
@@ -11,7 +9,10 @@ export const FontSizeDropdown = ({ fontSize, setFontSize }: FontSizeDropdownProp
     const { closeRef } = useCloseRef()
     return (
         <details className="dropdown dropdown-top" ref={closeRef}>
-            <summary className="btn min-w-[140px] font-semibold shadow-btn hover:border-transparent hover:bg-base-200">
+            <summary
+                tabIndex={-1}
+                className="btn min-w-[140px] font-semibold shadow-btn hover:border-transparent hover:bg-base-200"
+            >
                 FontSize {fontSize}
             </summary>
 

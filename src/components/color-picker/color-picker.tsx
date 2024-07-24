@@ -3,6 +3,8 @@ import { Alpha, Hue, Saturation, IColor } from 'react-color-palette'
 
 import { Dropdown } from '@/components/dropdown'
 
+import 'react-color-palette/css'
+
 type ColorPickerProps = {
     color: IColor
     setColor: Dispatch<SetStateAction<IColor>>
