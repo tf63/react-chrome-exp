@@ -111,7 +111,7 @@ const FormulaTemplates = () => {
 
 // SCにしたいが面倒なので保留
 export const NavSidebar = () => (
-    <div className="bg-grad text-primary-content shadow-grad h-full w-full overflow-scroll rounded-xl p-6 pl-10">
+    <div className="m-5 h-full w-full overflow-scroll rounded-xl bg-grad p-6 pl-10 text-primary-content shadow-grad">
         <h2 className="mb-2 text-center text-xl font-semibold">Templates</h2>
         <p className="mb-4 flex items-center justify-center text-xs">
             Press <span className="mx-2 rounded-md bg-slate-600 bg-opacity-15 px-1 py-0.5">Ctrl+Num</span> to Copy

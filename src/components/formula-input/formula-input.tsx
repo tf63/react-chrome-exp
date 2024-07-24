@@ -47,7 +47,7 @@ export const FormulaInput = ({ inline }: FormulaInputProps) => {
 
     return (
         <div>
-            <div className="card bg-base-100 mx-auto mb-12 mt-6 max-w-[900px] p-8 pb-10 shadow-md">
+            <div className="card mx-auto mb-12 mt-6 max-w-[900px] bg-base-100 p-8 pb-10 shadow-md">
                 <p className="font-bold">Katex Block</p>
                 <div className="w-full">
                     <div className="mx-20 overflow-hidden border-b-2 py-2">
@@ -85,7 +85,7 @@ export const FormulaInput = ({ inline }: FormulaInputProps) => {
             <div
                 className={cn(
                     'card mx-auto h-fit min-h-44 max-w-[900px] p-8 2xl:min-h-80',
-                    isColorLight(color.hex) ? 'shadow-dark bg-zinc-500 text-zinc-200' : 'shadow-md'
+                    isColorLight(color.hex) ? 'bg-zinc-500 text-zinc-200 shadow-dark' : 'shadow-md'
                 )}
             >
                 <p className="font-bold">Preview</p>
