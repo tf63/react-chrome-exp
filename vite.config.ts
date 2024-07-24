@@ -22,8 +22,8 @@ const manifest = defineManifest({
     }
 })
 
-//github.com/vitejs/vite/issues/15012#issuecomment-1825035992
-https: const warningsToIgnore = [
+// https://github.com/vitejs/vite/issues/15012#issuecomment-1825035992
+const warningsToIgnore = [
     ['SOURCEMAP_ERROR', "Can't resolve original location of error"],
     ['INVALID_ANNOTATION', 'contains an annotation that Rollup cannot interpret']
 ]
