@@ -42,6 +42,7 @@
         "@types/chrome": "^0.0.268",
         "@types/downloadjs": "^1.4.6",
         "@types/katex": "^0.16.7",
+        "@types/node": "^20.14.12",
         "@types/react": "^18.3.3",
         "@types/react-dom": "^18.3.0",
         "@typescript-eslint/eslint-plugin": "^7.13.1",
